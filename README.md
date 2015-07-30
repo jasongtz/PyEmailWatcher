@@ -28,7 +28,7 @@ When attempting a delete, both 'Trash' and 'Deleted Items' folders will be attem
 Example
 -----
 
-Below is a example script that I use to monitor an inbox and update my blog with each new email. You can see the full code of that application [here](https://github.com/jasongtz/BasecampHelper).
+Below is a example script that I use to monitor an inbox and update my blog with each new email. You can see the full code of that application [here](https://github.com/jasongtz).
 
 ----------
 
@@ -59,13 +59,12 @@ Below is a example script that I use to monitor an inbox and update my blog with
 Requirements
 ------
 
-`PyEmailWatcher` dependencies are all in the Python 2 standard library.
+`PyEmailWatcher` dependencies are all in the standard library.
 
 Coming Soon
 ------
 
-- Better exception handling for:
+- Better exception handling
 >	- deleting emails
 >	- empty inboxes
->	- empty inboxes (no messages retrieved)
 - Looking in folders other than 'Inbox'
