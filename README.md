@@ -31,29 +31,29 @@ Example
 Below is a example script that I use to monitor an inbox and update my blog with each new email. You can see the full code of that application [here](https://github.com/jasongtz/BasecampHelper).
 
 ----------
+```python
+	login = Watcher('jamesbond@misix.com', 'totallysecretpassword', 
+		'imap.misix.com', 'smtp.misix.com')
+	login.connect()
+	results = login.search('Mission: ')
 
-		login = Watcher('jamesbond@misix.com', 'totallysecretpassword', 
-			'imap.misix.com', 'smtp.misix.com')
-		login.connect()
-		results = login.search('Mission: ')
+	for email in results:
+		# email = tuple
+		uid, message = email
 
-		for email in results:
-			# email = tuple
-			uid, message = email
+		title = message['subject']
+		for part in message.walk():
+		if part.get_content_maintype() == 'text':
+			body = email.get_payload()
+			break
 
-			title = message['subject']
-			for part in message.walk():
-			if part.get_content_maintype() == 'text':
-				body = email.get_payload()
-				break
-
-			update_blog(title, body)
+		update_blog(title, body)
 			
-			# Send a confirmation email and delete the message
-			login.confirm(uid, message)
+		# Send a confirmation email and delete the message
+		login.confirm(uid, message)
 		
-		login.logout()
-
+	login.logout()
+```
 ------------
 
 Requirements
