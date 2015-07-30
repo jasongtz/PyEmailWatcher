@@ -28,7 +28,7 @@ When attempting a delete, both 'Trash' and 'Deleted Items' folders will be attem
 Example
 -----
 
-Below is a example script that I use to monitor an inbox and update my blog with each new email. You can see the full code of that application [here](https://github.com/jasongtz).
+Below is a example script that I use to monitor an inbox and update my blog with each new email. You can see the full code of that application [here](https://github.com/jasongtz/BasecampHelper).
 
 ----------
 
