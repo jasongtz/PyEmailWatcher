@@ -67,5 +67,4 @@ Coming Soon
 - Better exception handling
 >	- deleting emails
 >	- empty inboxes
-- setup.py for better distribution
 - Looking in folders other than 'Inbox'
