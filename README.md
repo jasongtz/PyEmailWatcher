@@ -25,12 +25,22 @@ Each message is treated as a tuple of the message's uid and an [email.message](h
 
 When attempting a delete, both 'Trash' and 'Deleted Items' folders will be attempted.
 
-Example
+Examples
 -----
+
+`PyEmailWatcher` can be used to find a message in the inbox in just a few lines.
+
+```python
+	login = Watcher('jamesbond@misix.com', 'totallysecretpassword', 
+		'imap.misix.com', 'smtp.misix.com')
+	results = login.search('Subject_query')
+	for email in results:
+		some_action(email)
+```
+------------
 
 Below is a example script that I use to monitor an inbox and update my blog with each new email. You can see the full code of that application [here](https://github.com/jasongtz/BasecampHelper).
 
-----------
 ```python
 	login = Watcher('jamesbond@misix.com', 'totallysecretpassword', 
 		'imap.misix.com', 'smtp.misix.com')
