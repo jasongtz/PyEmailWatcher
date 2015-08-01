@@ -39,7 +39,7 @@ Examples
 ```
 ------------
 
-Below is a example script that I use to monitor an inbox and update my blog with each new email. You can see the full code of that application [here](https://github.com/jasongtz/BasecampHelper).
+Below is a example script that I use to monitor an inbox and update my blog with each new email. You can see the full code of that application [here](../../../BasecampHelper).
 
 ```python
 	login = Watcher('jamesbond@misix.com', 'totallysecretpassword', 
