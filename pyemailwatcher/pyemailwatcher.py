@@ -91,7 +91,9 @@ class Watcher():
 		reply_message = MIMEText(msg)
 		reply_message['Subject'] = self.confirm_from
 		reply_message['From'] = self.username
-		reply_message['To'] = to_addr # needs to be list
+		reply_message['To'] = to_addr 
+			# to_addr needs to be string
+			# if multiple recips, use to_addr = ", ".join(recipients)
 
 		send.sendmail(self.username, to_addr, reply_message.as_string())
 
